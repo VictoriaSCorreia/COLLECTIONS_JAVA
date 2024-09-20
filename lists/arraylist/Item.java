@@ -1,5 +1,7 @@
 package lists.arraylist;
 
+import java.util.Comparator;
+
 public class Item implements Comparable<Item>{
       private String nome;
       private double preco;
@@ -37,3 +39,20 @@ public class Item implements Comparable<Item>{
         return nome.compareTo(i.nome);
     }
   }
+
+// Classe para comparar Item por valor
+class CompararValor implements Comparator<Item> {
+	@Override
+	public int compare(Item i1, Item i2) {
+		return Double.compare(i1.getPreco(), i2.getPreco());
+	}
+}
+// Classe para comparar Item por quantidade
+class CompararQuant implements Comparator<Item> {
+	@Override
+	public int compare(Item i1, Item i2) {
+		return Integer.compare(i1.getQuant(), i2.getQuant());
+	}
+}
+
+

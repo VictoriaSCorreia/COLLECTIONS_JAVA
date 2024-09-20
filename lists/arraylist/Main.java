@@ -1,7 +1,5 @@
 package lists.arraylist;
 
-import java.util.Collections;
-
 public class Main {
     public static void main(String[] args) {
         // Criando uma instância do carrinho de compras
@@ -20,8 +18,11 @@ public class Main {
         carrinhoDeCompras.removerItem("Lápis");
 
         //Ordenando Itmes
-        carrinhoDeCompras.ordenarItens();
+        carrinhoDeCompras.ordenarItensNome();
         //Collections.sort(carrinhoDeCompras.getItemList());
+
+      /*   carrinhoDeCompras.ordenarItensQuant();
+        carrinhoDeCompras.ordenarItensValor(); */
         
         carrinhoDeCompras.exibirItens();
 

@@ -63,7 +63,13 @@ public class CarrinhoDeCompras{
         '}';
   }
 
-  public void ordenarItens(){
+  public void ordenarItensNome(){
     Collections.sort(this.itemList);
+  }
+  public void ordenarItensQuant(){
+    Collections.sort(this.itemList, new CompararQuant());
+  }
+  public void ordenarItensValor(){
+    Collections.sort(this.itemList, new CompararValor());
   }
 }
