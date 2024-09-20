@@ -2,8 +2,9 @@ package lists.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
-public class CarrinhoDeCompras {
+public class CarrinhoDeCompras{
   private List<Item> itemList;
 
   // instanciando um arraylist
@@ -28,6 +29,10 @@ public class CarrinhoDeCompras {
     } else {
       System.out.println("A lista está vazia!");
     }
+  }
+
+  public List<Item> getItemList() {
+    return itemList;
   }
 
   public double calcularValorTotal() {
@@ -58,5 +63,7 @@ public class CarrinhoDeCompras {
         '}';
   }
 
- 
+  public void ordenarItens(){
+    Collections.sort(this.itemList);
+  }
 }

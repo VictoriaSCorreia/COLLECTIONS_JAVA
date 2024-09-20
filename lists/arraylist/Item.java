@@ -1,6 +1,6 @@
 package lists.arraylist;
 
-public class Item {
+public class Item implements Comparable<Item>{
       private String nome;
       private double preco;
       private int quant;
@@ -31,4 +31,9 @@ public class Item {
                   ", quant=" + quant +
                   '}';
       }
+
+    @Override
+    public int compareTo(Item i) {
+        return nome.compareTo(i.nome);
+    }
   }
