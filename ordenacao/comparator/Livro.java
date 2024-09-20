@@ -39,6 +39,8 @@ class CompararAno implements Comparator<Livro> {
 	@Override
 	public int compare(Livro l1, Livro l2) {
 		return Integer.compare(l1.getAno(), l2.getAno());
+
+        // mudar a ordem (crescente, decrescente)
 		/*
 		if (l1.getAno() < l2.getAno())
 			return -1;
